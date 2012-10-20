@@ -1,0 +1,76 @@
+
+PDF TO BOOKREADER
+=============
+ README FILE
+ 
+The BOOKREADER help to view books online.
+It converts the uploaded .pdf file into online 'books'.
+
+
+How to run the script
+---------------------------
+
+1.Install "ImageMagick Convert Command-Line Tool" ,in case  if it not already installed.
+
+	install using : sudo apt-get install imagemagick
+
+	
+2. Copy the following files and directory into home directory
+
+ 	-bookreader.js
+ 	-index.html.
+	-bookreader directory with files
+		-bookreader/BookReader.css
+		-bookreader/BookReader.js
+		-bookreader/images/*.jpg
+
+3. Copy the script "pdf2bookreader.py" into home directory.
+
+4. Get the terminal and run the script using:
+
+	python pdf2bookreader.py  <path> <name_of_pdf_file.pdf>
+
+5. It will create a directory having same name of you .pdf file in your home 
+	directory with following files and directories.
+
+ 	-bookreader.js
+ 	-index.html.
+ 	-images folder
+	-bookreader directory  with files
+		-bookreader/BookReader.css
+		-bookreader/BookReader.js
+		-bookreader/images/*.jpg
+
+6. Get connect to internet and open the "index.html" in browser.
+	You can see the entered .pdf file in a book format.
+	use the options to "turn over pages", "zoom in/out " etc.
+
+How it works
+----------------
+1. The program takes the input as the pdf file you entered.
+
+2. It runs the 'convert' command behind the screen to convert the pages of .pdf file into images.
+
+3. Creates a folder having the same name of your .pdf file in your home directory
+
+4. Creates a folder named 'images' inside the newly created folder and moves all of the image files into it,
+	after renaming them.
+
+5. Creates the new 'bookreader.js" file in the newly created folder.
+
+6. Creates the new 'index.html" file in the newly created folder.
+
+7. Creates a new "bookreader" directory with the newly created files "BookReader.css" and "BookReader.js" and 
+	the folder "images" with its .jpg contents in it.
+
+Platforms
+-----------
+In any unix -like platform,it runs on Python 2.6.5 or higher version.
+	
+
+
+	
+	
+
+
+
