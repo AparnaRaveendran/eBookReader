@@ -23,7 +23,7 @@ br.getPageURI = function(index, reduce, rotate) {
     // could e.g. look at reduce and load images from a different directory
     // or pass the information to an image server
     var leafStr = '0000';            
-    var imgStr = (index+1).toString();
+    var imgStr = (index).toString();
     var re = new RegExp("0{"+imgStr.length+"}$");
     var url = %(leaf_imageurl)s+leafStr.replace(re, imgStr) + '.jpg';
     return url;
