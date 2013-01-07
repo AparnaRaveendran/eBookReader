@@ -81,8 +81,11 @@ def rename_files(destn_path):
 			num=name[0].split('-')
 			if int(num[1])<10:
 				newfilename='000'+num[1]+'.jpg'
-			else:
+
+			elif (int(num[1])>10 and int(num[1])<100):
 				newfilename='00'+num[1]+'.jpg'
+			else:
+				newfilename='0'+num[1]+'.jpg'
 			
 			os.rename(destn_path+filename, destn_path+newfilename)
 			if os.path.exists(destn_path+filename)==True:
